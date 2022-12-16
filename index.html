@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./dist/css/style.css">
+    <link rel="stylesheet" href="./dist/css/reset.css">
+    <title>Thought and virgin</title>
+</head>
+
+<body style="height:200% ;">
+    <header class="navbar bg-dark d-flex justify-content-center">
+        <div class="row ">
+            <h1 class="text-center p-3 text-white ">بازی فکر و بکر</h1>
+        </div>
+    </header>
+
+    <div class="col-12 mt-5 p-4 d-flex justify-content-center" onfocus="tab_input_code()">
+
+        <input id="input-one" type="number" min="1" max="9" class="form-control p-2 m-1 text-center input_number   d-inline" placeholder="0" onfocus="tab_input_code()">
+        <input id="input-two" type="number" min="1" max="9" class="form-control p-2 m-1 text-center input_number   d-inline" placeholder="0">
+        <input id="input-three" type="number" min="1" max="9" class="form-control p-2 m-1 text-center input_number d-inline" placeholder="0">
+        <input id="input-four" type="number" min="1" max="9" class="form-control p-2 m-1 text-center input_number  d-inline" placeholder="0">
+
+    </div>
+
+    <div class="row m-3 justify-content-center">
+        <div class="col mt-1 d-flex justify-content-center ">
+            <button type="button" id="button" class="btn btn-primary p-4 flex-grow-1 btn-lg" onclick="check()">برسی کردن</button>
+        </div>
+    </div>
+    <footer>
+        <div class="row col-12 p-2 mt-5 d-flex flex-row-reverse">
+            <div class="col-9">
+                <p class="text-center">:تعداد شانس های باقی مانده</p>
+            </div>
+            <div class="col-1 ">
+                <p id="june" class="text-center">10</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <button type="button" id="btn-winner" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-titletext h5 m-auto text-success" id="exampleModalLabel">شما بردید</h1>
+                </div>
+                <div class="modal-body text-primary text-center">
+                    <img style="width:83% ;" class=" img img-fluid overflow-visible" src="img/golden-winners-cup_1284-18399.webp">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="retern-winner" class="btn btn-primary flex-grow-1 p-3" data-bs-dismiss="modal">دوباره بازی کنید</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <button type="button" id="btn-lose" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#lose">
+       lose
+      </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="lose" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content ">
+                <div class="modal-header border-0 red">
+                    <h1 class="modal-titletext h5 m-auto text-danger" id="exampleModalLabel">شما باختید</h1>
+                </div>
+                <div class="modal-body p-0 text-primary text-center overflow-hidden">
+                    <img style="" class="img_lose img-fluid overflow-visible" src="img/angry-gamer-boy-cartoon-vector-icon-illustration-people-technology-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3984.webp">
+                </div>
+                <div class="modal-footer border-0 red">
+                    <button type="button" id="retern-lose" class="btn btn-primary flex-grow-1 p-3" data-bs-dismiss="modal">دوباره بازی کنید</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scirpt.js"></script>
+    <Script src="./dist/js/bootstrap.bundle.min.js"></Script>
+</body>
+
+</html>
